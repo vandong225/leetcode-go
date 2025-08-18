@@ -9,6 +9,12 @@ func maxArea(height []int) int {
 			maxS = newS
 		}
 
+		if height[start] < height[end] {
+			start++
+		} else {
+			end--
+		}
+
 	}
 
 	return maxS

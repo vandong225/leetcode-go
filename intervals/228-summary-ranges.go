@@ -1,3 +1,7 @@
+package intervals
+
+import "strconv"
+
 func summaryRanges(nums []int) []string {
 	res := make([]string, 0)
 

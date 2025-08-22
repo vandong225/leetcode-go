@@ -5,16 +5,18 @@ import (
 	"sort"
 )
 
-func merge(intervals [][]int) [][]int {
+func insert(intervals [][]int, newInterval []int) [][]int {
+	intervals = append(intervals, newInterval)
 
 	sort.Slice(intervals, func(i, j int) bool {
 		return intervals[i][0] < intervals[j][0]
 	})
+
 	res := make([][]int, 0)
 
 	start := 0
-	for start < len(intervals) {
 
+	for start < len(intervals) {
 		min := intervals[start][0]
 		max := intervals[start][1]
 
@@ -27,7 +29,6 @@ func merge(intervals [][]int) [][]int {
 		res = append(res, []int{min, max})
 
 	}
-
 	return res
 
 }

@@ -9,9 +9,9 @@ type Trie struct {
 	Dict map[string]int
 }
 
-func Constructor() Trie {
-	return Trie{Dict: make(map[string]int)}
-}
+// func Constructor() Trie {
+// 	return Trie{Dict: make(map[string]int)}
+// }
 
 func (this *Trie) Insert(word string) {
 	str := ""

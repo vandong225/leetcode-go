@@ -26,10 +26,13 @@ func spiralOrder(matrix [][]int) []int {
 			bottom--
 		}
 
-		for i := bottom; i >= top; i-- {
-			res = append(res, matrix[i][left])
+		if left <= right {
+
+			for i := bottom; i >= top; i-- {
+				res = append(res, matrix[i][left])
+			}
+			left++
 		}
-		left++
 	}
 
 	return res

@@ -11,7 +11,7 @@ func rotate(matrix [][]int) {
 
 	for row := 0; row < n; row++ {
 		for r, l := n-1, 0; l < r; l, r = l+1, r-1 {
-
+			matrix[row][r], matrix[row][l] = matrix[row][l], matrix[row][r]
 		}
 	}
 
